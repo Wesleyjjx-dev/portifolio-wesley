@@ -15,3 +15,16 @@ fetch(`https://api.github.com/users/${username}`)
   .catch(() => {
     console.error('Erro ao carregar dados do GitHub')
   })
+   const toggleBtn = document.getElementById('themeToggle')
+
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark')
+
+  const isDark = document.body.classList.contains('dark')
+  localStorage.setItem('theme', isDark ? 'dark' : 'light')
+})
+
+// manter tema ao recarregar
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark')
+}

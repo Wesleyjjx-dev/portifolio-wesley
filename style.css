@@ -1,3 +1,10 @@
+:root {
+  --bg-color: #f4f6f8;
+  --text-color: #333;
+  --card-bg: #fff;
+  --header-bg: linear-gradient(135deg, #111, #333);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,12 +12,12 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: #f4f6f8;
-  color: #333;
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 .header {
-  background: linear-gradient(135deg, #111, #333);
+  background: var(--header-bg);
   color: #fff;
   padding: 60px 20px;
   text-align: center;
@@ -43,7 +50,7 @@ body {
 }
 
 .card {
-  background: #fff;
+  background: var(--card-bg);
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
@@ -125,4 +132,12 @@ body {
     flex-direction: column;
     text-align: center;
   }
+}
+.theme-toggle {
+  margin-top: 20px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
 }

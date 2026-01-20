@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Wesley Cruz | Portfólio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,6 +11,17 @@
   <header class="header">
     <h1>Wesley de Almeida Cruz</h1>
     <p>Estudante de Ciência da Computação | Front-end em formação</p>
+
+    <div class="github-profile">
+      <img id="avatar" alt="Avatar do GitHub">
+      <div class="github-info">
+        <p id="bio"></p>
+        <p>👥 Seguidores: <span id="followers"></span></p>
+        <p>📍 <span id="location"></span></p>
+        <p>📦 Repositórios: <span id="repos"></span></p>
+      </div>
+    </div>
+
     <div class="links">
       <a href="https://github.com/wesleyjjx-dev" target="_blank">GitHub</a>
     </div>
@@ -22,7 +34,10 @@
 
       <div class="card">
         <h3>To-Do List</h3>
-        <p>Aplicação web para gerenciamento de tarefas com JavaScript puro.</p>
+        <p>
+          Aplicação web para gerenciamento de tarefas, com JavaScript puro,
+          persistência de dados no navegador e interface responsiva.
+        </p>
         <div class="card-links">
           <a href="COLOQUE_AQUI_LINK_DA_PAGE" target="_blank">Demo</a>
           <a href="https://github.com/wesleyjjx-dev/todo-list-js" target="_blank">Código</a>
@@ -31,7 +46,10 @@
 
       <div class="card">
         <h3>Landing Page Responsiva</h3>
-        <p>Landing page responsiva focada em apresentação de produto.</p>
+        <p>
+          Landing page desenvolvida com HTML e CSS moderno, foco em semântica,
+          responsividade e boas práticas de layout.
+        </p>
         <div class="card-links">
           <a href="COLOQUE_AQUI_LINK_DA_PAGE" target="_blank">Demo</a>
           <a href="https://github.com/Wesleyjjx-dev/landing-page" target="_blank">Código</a>
@@ -45,6 +63,6 @@
     <p>© 2026 — Wesley Cruz</p>
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
-
 </html>

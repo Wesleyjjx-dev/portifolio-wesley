@@ -119,3 +119,10 @@ body {
     transform: translateY(0);
   }
 }
+
+@media (max-width: 600px) {
+  .github-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+}

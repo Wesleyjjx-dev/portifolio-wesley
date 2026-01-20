@@ -1,84 +1,229 @@
-/* RESET */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* VARIÁVEIS */
-:root {
-  --bg: #f4f6f8;
-  --text: #1f2933;
-  --card: #ffffff;
-  --primary: #2563eb;
-}
-
-.dark {
-  --bg: #0f172a;
-  --text: #e5e7eb;
-  --card: #1e293b;
-  --primary: #60a5fa;
-}
-
-/* BODY */
 body {
-  margin: 0;
-  padding: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  transition: background-color 0.3s, color 0.3s;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* HEADER */
-header {
-  max-width: 900px;
-  margin: 0 auto 40px;
+/* =========================
+   VARIÁVEIS (LIGHT MODE)
+========================= */
+:root {
+  --bg-color: #f9fafb;
+  --card-bg: #ffffff;
+  --text-color: #1f2937;
+  --text-muted: #6b7280;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --border: #e5e7eb;
+  --chip-bg: #f1f5f9;
+  --chip-text: #334155;
 }
 
-button {
-  background-color: var(--primary);
-  color: #fff;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 6px;
-  cursor: pointer;
+/* =========================
+   DARK MODE
+========================= */
+body.dark {
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --text-color: #f1f5f9;
+  --text-muted: #94a3b8;
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+  --border: #334155;
+  --chip-bg: #334155;
+  --chip-text: #e5e7eb;
 }
 
-button:hover {
-  opacity: 0.9;
-}
-
-/* SECTION */
-section {
-  max-width: 900px;
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 40px 20px;
 }
 
-/* LINKS */
-a {
-  color: var(--primary);
-  text-decoration: none;
-  font-weight: 500;
+/* =========================
+   HEADER / PERFIL
+========================= */
+header {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-a:hover {
-  text-decoration: underline;
+header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
 }
 
-/* PROJETOS */
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.github-info {
+  margin-top: 10px;
+}
+
+.github-info p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 4px 0;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+button,
+.btn {
+  cursor: pointer;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.toggle-dark {
+  margin-top: 15px;
+}
+
+/* =========================
+   SEÇÃO PROJETOS
+========================= */
+section {
+  margin-top: 60px;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: var(--primary);
+  display: block;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+/* =========================
+   GRID DE PROJETOS
+========================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* =========================
+   CARD DE PROJETO
+========================= */
 .project-card {
-  background-color: var(--card);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
   padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 .project-card p {
-  line-height: 1.5;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+/* =========================
+   TAGS (HTML, CSS, JS)
+========================= */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.tag {
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* =========================
+   BOTÕES DO CARD
+========================= */
+.card-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.card-buttons a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--chip-bg);
+  color: var(--text-color);
+  transition: background 0.2s ease;
+}
+
+.card-buttons a:hover {
+  background: var(--border);
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  section h2 {
+    font-size: 1.4rem;
+  }
 }

@@ -74,6 +74,13 @@ button,
   text-decoration: none;
 }
 
+button:hover,
+.btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  transition: 0.2s;
+}
+
 /* SEÇÃO */
 section h2 {
   font-size: 1.6rem;
@@ -89,16 +96,33 @@ section h2 {
 
 /* CARD */
 .project-card {
-  background: var(--card-bg);
   padding: 24px;
   border-radius: 16px;
   border-left: 4px solid var(--primary);
   box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  transition: 0.25s;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* Hover moderno */
 .project-card:hover {
   transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+}
+
+/* Cores diferentes por card com gradiente suave */
+.project-card:nth-child(1) {
+  border-left-color: #22c55e; /* verde */
+  background: linear-gradient(145deg, var(--card-bg), #dcfce7);
+}
+
+.project-card:nth-child(2) {
+  border-left-color: #6366f1; /* roxo */
+  background: linear-gradient(145deg, var(--card-bg), #e0e7ff);
+}
+
+.project-card:nth-child(3) {
+  border-left-color: #f59e0b; /* laranja */
+  background: linear-gradient(145deg, var(--card-bg), #ffedd5);
 }
 
 /* TAGS */
@@ -128,4 +152,8 @@ section h2 {
   border-radius: 8px;
   text-decoration: none;
   color: var(--text-color);
+}
+
+.card-buttons a:hover {
+  background: var(--border);
 }

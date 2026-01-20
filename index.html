@@ -7,53 +7,84 @@
 </head>
 <body>
 
+  <!-- HEADER / PERFIL -->
   <header class="container">
-  <img id="avatar" src="" alt="Avatar GitHub" />
+    <img id="avatar" alt="Avatar GitHub" />
 
-  <h1 id="name">Wesley de Almeida Cruz</h1>
-  <p id="bio">Carregando bio...</p>
+    <h1 id="name">Wesley de Almeida Cruz</h1>
+    <p id="bio">Carregando bio...</p>
 
-  <div class="github-info">
-    <p>
-      <strong id="followers">0</strong> seguidores ·
-      <strong id="following">0</strong> seguindo
-    </p>
-  </div>
+    <div class="github-info">
+      <p>
+        <strong id="followers">0</strong> seguidores ·
+        <strong id="following">0</strong> seguindo
+      </p>
+    </div>
 
-  <div style="margin-top: 15px;">
-    <a id="githubLink" class="btn" target="_blank">GitHub</a>
-    <button id="darkModeToggle" class="toggle-dark">🌙 Modo escuro</button>
-  </div>
-</header>
+    <div class="header-actions">
+      <a id="githubLink" class="btn" target="_blank">GitHub</a>
+      <button id="darkModeToggle">🌙 Modo escuro</button>
+    </div>
+  </header>
 
-
-  <section>
+  <!-- PROJETOS -->
+  <section class="container">
     <h2>Projetos</h2>
 
-    <div class="project-card">
-      <h3>To-do List</h3>
-      <p>Aplicação web para gerenciamento de tarefas com HTML, CSS e JavaScript.</p>
-      <a href="https://wesleyjjx-dev.github.io/todo-list-js/" target="_blank">Demo</a> |
-      <a href="https://github.com/wesleyjjx-dev/todo-list-js" target="_blank">Código</a>
-    </div>
+    <div class="projects-grid">
 
-    <div class="project-card">
-      <h3>Landing Page Responsiva</h3>
-      <p>Landing page focada em responsividade e estrutura semântica.</p>
-      <a href="https://wesleyjjx-dev.github.io/landing-page/" target="_blank">Demo</a> |
-      <a href="https://github.com/Wesleyjjx-dev/landing-page" target="_blank">Código</a>
-    </div>
+      <div class="project-card">
+        <h3>To-do List</h3>
 
-    <div class="project-card">
-      <h3>Pesquisa de Usuários GitHub</h3>
-      <p>Busca de usuários usando a API do GitHub com JavaScript puro.</p>
-      <a href="https://wesleyjjx-dev.github.io/pesquisa-usuarios-github/" target="_blank">Demo</a> |
-      <a href="https://github.com/Wesleyjjx-dev/pesquisa-usuarios-github" target="_blank">Código</a>
-    </div>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
 
+        <p>Aplicação web para gerenciamento de tarefas.</p>
+
+        <div class="card-buttons">
+          <a href="https://wesleyjjx-dev.github.io/todo-list-js/" target="_blank">Demo</a>
+          <a href="https://github.com/wesleyjjx-dev/todo-list-js" target="_blank">Código</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Landing Page Responsiva</h3>
+
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+        </div>
+
+        <p>Landing page focada em responsividade e semântica.</p>
+
+        <div class="card-buttons">
+          <a href="https://wesleyjjx-dev.github.io/landing-page/" target="_blank">Demo</a>
+          <a href="https://github.com/Wesleyjjx-dev/landing-page" target="_blank">Código</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Pesquisa de Usuários GitHub</h3>
+
+        <div class="tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">API</span>
+        </div>
+
+        <p>Busca de usuários utilizando a API do GitHub.</p>
+
+        <div class="card-buttons">
+          <a href="https://wesleyjjx-dev.github.io/pesquisa-usuarios-github/" target="_blank">Demo</a>
+          <a href="https://github.com/Wesleyjjx-dev/pesquisa-usuarios-github" target="_blank">Código</a>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <script src="script.js"></script>
 </body>
 </html>
-

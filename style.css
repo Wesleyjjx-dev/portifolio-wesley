@@ -88,3 +88,9 @@ body {
   border-radius: 50%;
   border: 3px solid #fff;
 }
+
+.subtitle {
+  font-size: 18px;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}

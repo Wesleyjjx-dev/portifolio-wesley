@@ -73,3 +73,18 @@ body {
   background: #eaeaea;
   font-size: 14px;
 }
+
+.github-profile {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.github-profile img {
+  width: 120px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}

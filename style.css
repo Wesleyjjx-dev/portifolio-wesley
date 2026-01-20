@@ -22,8 +22,19 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: var(--bg-color);
   background: var(--bg-color);
   color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .header {
@@ -164,3 +175,18 @@ body {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
+button {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+

@@ -36,6 +36,14 @@ body {
   border-radius: 20px;
 }
 
+.dark {
+  --bg-color: #121212;
+  --text-color: #eaeaea;
+  --card-bg: #1e1e1e;
+  --header-bg: linear-gradient(135deg, #000, #222);
+}
+
+
 .container {
   max-width: 900px;
   margin: auto;

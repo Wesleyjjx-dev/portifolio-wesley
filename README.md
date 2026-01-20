@@ -48,3 +48,6 @@ portfolio-wesley/
 ├── index.html
 ├── style.css
 └── script.js
+
+## 📄 Licença
+Este projeto está licenciado sob a licença MIT.

@@ -152,15 +152,19 @@ section h2::after {
   border-radius: 16px;
   padding: 24px;
   border: 1px solid var(--border);
+  border-left: 4px solid transparent;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 
 .project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+  border-color: #3b82f6;
+  border-left-color: #3b82f6;
 }
+
 
 .project-card h3 {
   font-size: 1.2rem;
@@ -215,13 +219,7 @@ section h2::after {
 .card-buttons a:hover {
   background: var(--border);
 }
-body.dark .project-card::before {
-  background: linear-gradient(
-    135deg,
-    rgba(59, 130, 246, 0.15),
-    rgba(139, 92, 246, 0.15)
-  );
-}
+
 
 /* =========================
    RESPONSIVO

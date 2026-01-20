@@ -21,21 +21,23 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-family: Arial, sans-serif;
   background-color: var(--bg-color);
-  background: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 a {
   color: var(--primary);
   text-decoration: none;
+  font-weight: 500;
 }
 
 a:hover {
   text-decoration: underline;
 }
+
 
 .header {
   background: var(--header-bg);
@@ -162,17 +164,16 @@ a:hover {
 
 .project-card {
   background: var(--card-bg);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-  transition: 
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* animação */
 .project-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 button {
